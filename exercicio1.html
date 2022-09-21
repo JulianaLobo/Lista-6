@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+    <style>
+        .flex-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            width: 200px;
+        }
+    </style>
+    <script>
+        function assustado() {
+            document.getElementById("imagem").src = "img1/assustado.png";
+            document.getElementById("descricao").innerHTML = "O que você quer?";
+        }
+        function pensativo() {
+            document.getElementById("imagem").src = "img1/pensativo.png";
+            document.getElementById("descricao").innerHTML = "zzzzzzzzzz!!!";
+        }
+        function nervoso() {
+            document.getElementById("imagem").src = "img1/nervoso.png";
+            document.getElementById("descricao").innerHTML = "Não me aperte!!!";
+        }
+        function alegre() {
+            document.getElementById("imagem").src = "img1/alegre.png";
+            nome = prompt("Por favor, digite seu nome: ");
+            document.getElementById("descricao").innerHTML = `${nome}, vamos brincar?`;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="flex-box">
+        <div><img id="imagem" src="img1/pensativo.png" onmouseover="assustado()" onmouseout="pensativo()"
+                onmousedown="nervoso()" onmouseup="alegre()"></div>
+    </div>
+    <div class="flex-box">
+        <div>
+            <h3 id="descricao">zzzzzzzzzz!!!</h3>
+        </div>
+    </div>
+</body>
+
+</html>
