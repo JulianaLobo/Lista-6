@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+    <style>
+        .flex-box {
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            border: 1px solid black;
+            padding: 25px;
+            background-color: lightgreen;
+        }
+
+        .flex-box:hover {
+            background-color: lightblue;
+        }
+
+        h3,
+        p {
+            text-align: center;
+        }
+    </style>
+    <script>
+        candidato1 = 0;
+        candidato2 = 0;
+        candidato3 = 0;
+        candidato4 = 0;
+        function incrementaVoto1() {
+            document.getElementById(`candidato1`).innerHTML = `${++candidato1}`
+        }
+        function incrementaVoto2() {
+            document.getElementById(`candidato2`).innerHTML = `${++candidato2}`
+        }
+        function incrementaVoto3() {
+            document.getElementById(`candidato3`).innerHTML = `${++candidato3}`
+        }
+        function incrementaVoto4() {
+            document.getElementById(`candidato4`).innerHTML = `${++candidato4}`
+        }
+    </script>
+</head>
+
+<body>
+    <div class="flex-box" onclick="incrementaVoto1()">
+        <h3>Candidato 1</h3>
+        <img src="img2/candidato1.jpg" alt="">
+        <p>Número de votos: <span id="candidato1">0</span></p>
+    </div>
+    <div class="flex-box" onclick="incrementaVoto2()">
+        <h3>Candidato 2</h3>
+        <img src="img2/candidato2.jpg" alt="">
+        <p>Número de votos: <span id="candidato2">0</span></p>
+    </div>
+    <div class="flex-box" onclick="incrementaVoto3()">
+        <h3>Candidato 3</h3>
+        <img src="img2/candidato3.jpg" alt="">
+        <p>Número de votos: <span id="candidato3">0</span></p>
+    </div>
+    <div class="flex-box" onclick="incrementaVoto4()">
+        <h3>Candidato 4</h3>
+        <img src="img2/candidato4.jpg" alt="">
+        <p>Número de votos: <span id="candidato4">0</span></p>
+    </div>
+</body>
+
+</html>
